@@ -368,18 +368,19 @@
     }
     
     .contact-text strong {
-        font-size: 12px !important;
+        font-size: 14px !important;
         display: block !important;
-        margin-bottom: 3px !important;
+        margin-bottom: 4px !important;
     }
     
     .contact-text a {
-        font-size: 11px !important;
+        font-size: 13px !important;
         word-break: break-all !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         display: block !important;
-        line-height: 1.2 !important;
+        line-height: 1.3 !important;
+        white-space: nowrap !important;
     }
     
     .contact-item i {
