@@ -57,8 +57,8 @@ class ProgepesaContactForm {
        ?>
 
        <div class="progepesa-contact-wrapper">
-           <!-- Contact information -->
-            <div class="contact-info">
+           <!-- Contact information - centered above form -->
+           <div class="contact-info-section">
                <h2><i class="fas fa-address-book"></i> Võta ühendust</h2>
                <div class="contact-details">
                    <div class="contact-item">
@@ -81,10 +81,10 @@ class ProgepesaContactForm {
                        </div>
                    </div>
                </div>
-            </div>
+           </div>
 
-            <!-- Contact form - moved outside contact-info -->
-            <div class="contact-form">
+           <!-- Contact form - centered below contact info -->
+           <div class="contact-form">
                        <h3><i class="fas fa-paper-plane"></i> Saada sõnum</h3>
                        <form id="progepesa-contact-form" method="post">
 
