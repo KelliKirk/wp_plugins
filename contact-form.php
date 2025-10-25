@@ -274,7 +274,7 @@
                                 wp_send_json_error('Sõnumi saatmine ebaõnnestus. Palun proovi uuesti.');
                                 wp_die();
                                }
+}
 
-                               // Run plugin
-                               new ProgepesaContactForm();
-                               ?>
+// Initialize the plugin
+new ProgepesaContactForm();
