@@ -354,10 +354,11 @@
     
     .contact-item {
         flex: 1 !important;
-        min-width: 140px !important;
-        max-width: 200px !important;
+        min-width: 160px !important;
+        max-width: 220px !important;
         overflow: hidden !important;
         word-wrap: break-word !important;
+        padding: 15px 10px !important;
     }
     
     .contact-text {
@@ -366,11 +367,23 @@
         text-overflow: ellipsis !important;
     }
     
+    .contact-text strong {
+        font-size: 12px !important;
+        display: block !important;
+        margin-bottom: 3px !important;
+    }
+    
     .contact-text a {
+        font-size: 11px !important;
         word-break: break-all !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         display: block !important;
+        line-height: 1.2 !important;
+    }
+    
+    .contact-item i {
+        font-size: 16px !important;
     }
     
     .contact-form {
