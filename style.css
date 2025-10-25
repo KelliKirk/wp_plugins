@@ -15,7 +15,7 @@
 .progepesa-contact-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 20px 40px 20px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -38,7 +38,7 @@
 .main-section-title {
     color: #000000 !important;
     font-size: 32px;
-    margin-bottom: 0 !important;
+    margin: 0 0 10px 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
