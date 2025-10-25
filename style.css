@@ -2,7 +2,16 @@
    Progepesa Contact Form Styles
    ============================================ */
 
-   .progepesa-contact-wrapper {
+/* Page title styling */
+.entry-title, .page-title, h1.entry-title {
+    text-align: center;
+    color: #000000;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.progepesa-contact-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -300,4 +309,22 @@
     .contact-form h3 {
         font-size: 20px;
     }
+    
+    /* Center page title on mobile */
+    .entry-title, .page-title, h1.entry-title {
+        font-size: 28px;
+    }
+}
+
+/* Additional layout improvements */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
