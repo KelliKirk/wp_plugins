@@ -26,16 +26,18 @@
    Contact info
    ============================================ */
 
-.contact-info h2 {
+/* Centered title above form */
+.form-section-title {
     color: #000000 !important;
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 20px !important;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     font-weight: 700;
     text-align: center;
+    width: 100%;
 }
 
 .contact-info h2 i {
