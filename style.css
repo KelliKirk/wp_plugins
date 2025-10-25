@@ -2,22 +2,24 @@
    Progepesa Contact Form Styles
    ============================================ */
 
-/* Page title styling */
-.entry-title, .page-title, h1.entry-title {
-    text-align: center;
-    color: #000000;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
+/* Page title styling - Force override theme styles */
+.entry-title, .page-title, h1.entry-title, .page .entry-title, .page h1 {
+    text-align: center !important;
+    color: #000000 !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
 }
 
 .progepesa-contact-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 40px;
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr !important;
+    gap: 40px !important;
+    align-items: start !important;
 }
 
 /* ============================================
@@ -318,13 +320,16 @@
 
 /* Additional layout improvements */
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    grid-column: 1 !important;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    grid-column: 2 !important;
+    margin-top: 0 !important;
 }

@@ -80,9 +80,11 @@ class ProgepesaContactForm {
                            </a>
                        </div>
                    </div>
+               </div>
+            </div>
 
-                   <!-- Contact form -->
-                    <div class="contact-form">
+            <!-- Contact form - moved outside contact-info -->
+            <div class="contact-form">
                        <h3><i class="fas fa-paper-plane"></i> Saada sõnum</h3>
                        <form id="progepesa-contact-form" method="post">
 
