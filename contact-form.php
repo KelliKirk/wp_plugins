@@ -88,55 +88,73 @@ class ProgepesaContactForm {
                        <h3><i class="fas fa-paper-plane"></i> Saada sõnum</h3>
                        <form id="progepesa-contact-form" method="post">
 
-                       <!-- Name field -->
-                        <div class="form-group">
-                           <label for="contact-name">
-                               <i class="fas fa-user"></i> Nimi
-                           </label>
-                           <input type="text" id="contact-name" name="contact-name" placeholder="Sinu nimi" required>
+                       <!-- Two-column layout for first 4 fields -->
+                       <div class="form-row">
+                           <!-- Name field -->
+                           <div class="form-group form-col">
+                               <label for="contact-name">
+                                   <i class="fas fa-user"></i> Nimi *
+                               </label>
+                               <input type="text" id="contact-name" name="contact-name" placeholder="Sinu nimi" required>
                            </div>
 
                            <!-- Email field -->
-                            <div class="form-group">
-                            <label for="contact-email">
-                           <i class="fas fa-envelope"></i> Email *
-                       </label>
-                       <input 
-                           type="email" 
-                           id="contact-email" 
-                           name="email" 
-                           placeholder="sinu@email.ee"
-                           required
-                       >
-                   </div>
+                           <div class="form-group form-col">
+                               <label for="contact-email">
+                                   <i class="fas fa-envelope"></i> Email *
+                               </label>
+                               <input 
+                                   type="email" 
+                                   id="contact-email" 
+                                   name="email" 
+                                   placeholder="sinu@email.ee"
+                                   required
+                               >
+                           </div>
+                       </div>
 
-                   <!-- Subject field -->
-                   <div class="form-group">
-                       <label for="contact-subject">
-                           <i class="fas fa-tag"></i> Teema *
-                       </label>
-                       <input 
-                           type="text" 
-                           id="contact-subject" 
-                           name="subject" 
-                           placeholder="Kuidas ma saan abiks olla?"
-                           required
-                       >
-                   </div>
+                       <div class="form-row">
+                           <!-- Subject field -->
+                           <div class="form-group form-col">
+                               <label for="contact-subject">
+                                   <i class="fas fa-tag"></i> Teema *
+                               </label>
+                               <input 
+                                   type="text" 
+                                   id="contact-subject" 
+                                   name="subject" 
+                                   placeholder="Kuidas ma saan abiks olla?"
+                                   required
+                               >
+                           </div>
+
+                           <!-- Phone field (optional) -->
+                           <div class="form-group form-col">
+                               <label for="contact-phone">
+                                   <i class="fas fa-phone"></i> Telefon
+                               </label>
+                               <input 
+                                   type="tel" 
+                                   id="contact-phone" 
+                                   name="phone" 
+                                   placeholder="+372 1234 5678"
+                               >
+                           </div>
+                       </div>
                            
-                   <!-- Message field -->
-                   <div class="form-group">
-                       <label for="contact-message">
-                           <i class="fas fa-comment"></i> Sõnum *
-                       </label>
-                       <textarea 
-                           id="contact-message" 
-                           name="message" 
-                           rows="6"
-                           placeholder="Kirjuta oma küsimus siia..."
-                           required
-                       ></textarea>
-                   </div>
+                       <!-- Message field - full width -->
+                       <div class="form-group">
+                           <label for="contact-message">
+                               <i class="fas fa-comment"></i> Sõnum *
+                           </label>
+                           <textarea 
+                               id="contact-message" 
+                               name="message" 
+                               rows="4"
+                               placeholder="Kirjuta oma küsimus siia..."
+                               required
+                           ></textarea>
+                       </div>
 
                    <!-- Submit button -->
                     <div class="form-group">

@@ -103,16 +103,14 @@
 
 .contact-form {
     background: white;
-    padding: 25px !important;
+    padding: 30px !important;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid #E5E7EB;
     max-width: 100% !important;
     width: 100% !important;
     height: auto !important;
-    max-height: 450px !important;
     display: block !important;
-    overflow-y: auto !important;
 }
 
 .contact-form h3 {
@@ -129,8 +127,20 @@
     font-size: 28px;
 }
 
+/* Form layout */
+.form-row {
+    display: flex !important;
+    gap: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.form-col {
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+}
+
 .form-group {
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
 }
 
 .form-group label {
@@ -167,7 +177,7 @@
 .form-group textarea {
     resize: vertical;
     min-height: 100px !important;
-    max-height: 120px !important;
+    width: 100% !important;
 }
 
 .submit-button {
