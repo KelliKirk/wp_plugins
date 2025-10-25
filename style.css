@@ -1,0 +1,303 @@
+/* ============================================
+   Progepesa Contact Form Styles
+   ============================================ */
+
+   .progepesa-contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+/* ============================================
+   Contact info
+   ============================================ */
+
+.contact-info h2 {
+    color: #2160F3;
+    font-size: 28px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info h2 i {
+    font-size: 32px;
+}
+
+.contact-info p {
+    color: #6B7280;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: #F9FAFB;
+    border-radius: 12px;
+    border: 2px solid #E5E7EB;
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    border-color: #2160F3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 96, 243, 0.1);
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #2160F3;
+    margin-top: 3px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-text strong {
+    color: #111827;
+    font-size: 16px;
+}
+
+.contact-text a,
+.contact-text span {
+    color: #6B7280;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-text a:hover {
+    color: #2160F3;
+}
+
+/* ============================================
+   Contact form
+   ============================================ */
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #E5E7EB;
+}
+
+.contact-form h3 {
+    color: #2160F3;
+    font-size: 24px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form h3 i {
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group label i {
+    color: #2160F3;
+    margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2160F3;
+    box-shadow: 0 0 0 3px rgba(33, 96, 243, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px 30px;
+    background: #2160F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-button:hover {
+    background: #1E3A8A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 96, 243, 0.3);
+}
+
+.submit-button:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-button i {
+    font-size: 18px;
+}
+
+/* ============================================
+   Teated (Success/Error)
+   ============================================ */
+
+#form-messages {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+#form-messages.success {
+    display: block;
+    background: #D1FAE5;
+    border: 2px solid #10B981;
+    color: #065F46;
+}
+
+#form-messages.error {
+    display: block;
+    background: #FEE2E2;
+    border: 2px solid #EF4444;
+    color: #991B1B;
+}
+
+#form-messages i {
+    margin-right: 8px;
+}
+
+/* ============================================
+   Validation styles
+   ============================================ */
+
+/* Error fields */
+.error-field {
+    border-color: #EF4444 !important;
+    background-color: #FEF2F2;
+}
+
+.error-field:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Error notifications*/
+.field-error {
+    display: block;
+    color: #DC2626;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.field-error i {
+    margin-right: 5px;
+}
+
+/* Character counter */
+.char-counter {
+    text-align: right;
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 5px;
+}
+
+.char-counter.error {
+    color: #EF4444;
+    font-weight: 600;
+}
+
+/* Success fields */
+.success-field {
+    border-color: #10B981;
+}
+
+/* Focused state */
+.form-group.focused label {
+    color: #2160F3;
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+
+.submit-button.loading {
+    position: relative;
+}
+
+.submit-button.loading i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Responsive (Mobile)
+   ============================================ */
+
+@media (max-width: 768px) {
+    .progepesa-contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .contact-info h2 {
+        font-size: 24px;
+    }
+    
+    .contact-form h3 {
+        font-size: 20px;
+    }
+}
