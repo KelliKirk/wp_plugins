@@ -20,8 +20,9 @@
         // Load CSS and JS files
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
 
-        // AJAX handler form submission
+        // AJAX handler form submission (for both logged-in and non-logged-in users)
         add_action('wp_ajax_submit_contact_form', array($this, 'handle_form_submission'));
+        add_action('wp_ajax_nopriv_submit_contact_form', array($this, 'handle_form_submission'));
 
         // Shortcode for the contact form
         add_shortcode('progepesa_contact', array($this, 'contact_form_shortcode'));
@@ -34,10 +35,10 @@
         wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', array(), '6.0.0');
     
         // Plugin CSS
-        wp_enqueue_style('progepesa-contact-style', plugin_dir_url(__FILE__) . 'assets/css/contact-form.css', array(), '1.0.0');
+        wp_enqueue_style('progepesa-contact-style', plugin_dir_url(__FILE__) . 'style.css', array(), '1.0.0');
 
         // Plugin JS
-        wp_enqueue_script('progepesa-contact-script', plugin_dir_url(__FILE__) . 'assets/js/contact-form.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('progepesa-contact-script', plugin_dir_url(__FILE__) . 'contact-form.js', array('jquery'), '1.0.0', true);
 
         // Forward PHP data to JS
         wp_localize_script('progepesa-contact-script', 'contactFormData', array(
@@ -178,9 +179,9 @@
 
                             // Name is required
                             if(empty($name)) {
-                                $errors[] = 'Nimi on kohustuslik.'; }
-                                elseif(strlen($name) > 2) {
-                                    $errors[] = 'Nimi peab olema vähemalt 2 tähemärki.';
+                                $errors[] = 'Nimi on kohustuslik.';
+                            } elseif(strlen($name) < 2) {
+                                $errors[] = 'Nimi peab olema vähemalt 2 tähemärki.';
                             } elseif(strlen($name) > 100) {
                                 $errors[] = 'Nimi ei saa olla pikem kui 100 tähemärki.';
                             }
@@ -202,16 +203,13 @@
                            } elseif (strlen($subject) > 200) {
                            $errors[] = 'Teema on liiga pikk (max 200 tähemärki)';
                            }
-                             } elseif (strlen($subject) > 200) {
-                              $errors[] = 'Teema on liiga pikk (max 200 tähemärki)';
-                              }
     
                             // Message
                             if (empty($message)) {
                              $errors[] = 'Sõnum on kohustuslik';
                              } elseif (strlen($message) < 10) {
-                             $errors[] = 'Sõnum peab olema vähemalt 10 tähemärki'; }
-                              } elseif (strlen($message) > 1000) {
+                             $errors[] = 'Sõnum peab olema vähemalt 10 tähemärki';
+                             } elseif (strlen($message) > 1000) {
                               $errors[] = 'Sõnum on liiga pikk (max 1000 tähemärki)';
                                }
 
@@ -253,9 +251,10 @@
                                $email_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
 
                                // Email headers
-                               $headers = array('Content-Type: text/plain; charset=UTF-8'
-                               'From: ' . get_bloginfo('name') . ' <noreply@' . $_SERVER['HTTP_HOST'] . '>',
-                               'Reply-To: ' . $name . ' <' . $email . '>'
+                               $headers = array(
+                                   'Content-Type: text/plain; charset=UTF-8',
+                                   'From: ' . get_bloginfo('name') . ' <noreply@' . $_SERVER['HTTP_HOST'] . '>',
+                                   'Reply-To: ' . $name . ' <' . $email . '>'
                                );
 
                                // Send email

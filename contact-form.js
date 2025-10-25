@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
             success: function(response) {
                 if(response.success) {
                     // Show success message
-                    messages.addClass('success').html('<i class="fas fa-check-circle"></i> ${response.data} ').fadeIn();
+                    messages.addClass('success').html('<i class="fas fa-check-circle"></i> ' + response.data).fadeIn();
                     // Reset form
                     contactForm[0].reset();
                     // Scroll to message
@@ -42,12 +42,12 @@ jQuery(document).ready(function($) {
                     }, 500);
                 } else {
                     // Show error message
-                    messages.addClass('error').html('<i class="fas fa-exclamation-circle"></i> ${response.data} ').fadeIn();
+                    messages.addClass('error').html('<i class="fas fa-exclamation-circle"></i> ' + response.data).fadeIn();
                 }
             },
             error: function() {
                 // Server error
-                messages.addClass('error').html('<i class="fas fa-exclamation-circle"></i> ${contactFormData.error} ').fadeIn();
+                messages.addClass('error').html('<i class="fas fa-exclamation-circle"></i> ' + contactFormData.error).fadeIn();
             },
             complete: function() {
                 // Restore button
