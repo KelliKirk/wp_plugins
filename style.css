@@ -16,9 +16,17 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.contact-content {
     display: grid !important;
     grid-template-columns: 1fr 1.5fr !important;
     gap: 40px !important;
+    width: 100% !important;
     align-items: start !important;
 }
 
@@ -26,11 +34,11 @@
    Contact info
    ============================================ */
 
-/* Centered title above form */
-.form-section-title {
+/* Main centered title */
+.main-section-title {
     color: #000000 !important;
-    font-size: 28px;
-    margin-bottom: 20px !important;
+    font-size: 32px;
+    margin-bottom: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,9 +327,13 @@
    ============================================ */
 
 @media (max-width: 768px) {
-    .progepesa-contact-wrapper {
+    .contact-content {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
+    }
+    
+    .progepesa-contact-wrapper {
+        gap: 20px !important;
         padding: 20px 15px !important;
     }
     

@@ -57,35 +57,38 @@ class ProgepesaContactForm {
        ?>
 
        <div class="progepesa-contact-wrapper">
-           <!-- Contact information - left side -->
-           <div class="contact-info">
-               <div class="contact-details">
-                   <div class="contact-item">
-                       <i class="fas fa-envelope"></i>
-                       <div class="contact-text">
-                           <strong>E-post:</strong>
-                           <a href="mailto:<?php echo esc_attr($this->admin_email); ?>">
-                               <?php echo esc_html($this->admin_email); ?>
-                           </a>
+           <!-- Centered title at top -->
+           <h2 class="main-section-title"><i class="fas fa-address-book"></i> Võta ühendust</h2>
+           
+           <!-- Two-column layout below title -->
+           <div class="contact-content">
+               <!-- Contact information - left side -->
+               <div class="contact-info">
+                   <div class="contact-details">
+                       <div class="contact-item">
+                           <i class="fas fa-envelope"></i>
+                           <div class="contact-text">
+                               <strong>E-post:</strong>
+                               <a href="mailto:<?php echo esc_attr($this->admin_email); ?>">
+                                   <?php echo esc_html($this->admin_email); ?>
+                               </a>
+                           </div>
                        </div>
-                   </div>
 
-                   <div class="contact-item">
-                       <i class="fas fa-phone"></i>
-                       <div class="contact-text">
-                           <strong>Telefon</strong>
-                           <a href="tel:<?php echo esc_attr(str_replace(' ', '', $this->phone)); ?>">
-                               <?php echo esc_html($this->phone); ?>
-                           </a>
+                       <div class="contact-item">
+                           <i class="fas fa-phone"></i>
+                           <div class="contact-text">
+                               <strong>Telefon</strong>
+                               <a href="tel:<?php echo esc_attr(str_replace(' ', '', $this->phone)); ?>">
+                                   <?php echo esc_html($this->phone); ?>
+                               </a>
+                           </div>
                        </div>
                    </div>
                </div>
-           </div>
 
-           <!-- Contact form - right side -->
-           <!-- Centered title above form -->
-           <h2 class="form-section-title"><i class="fas fa-address-book"></i> Võta ühendust</h2>
-           <div class="contact-form">
+               <!-- Contact form - right side -->
+               <div class="contact-form">
                        <h3><i class="fas fa-paper-plane"></i> Saada sõnum</h3>
                        <form id="progepesa-contact-form" method="post">
 
