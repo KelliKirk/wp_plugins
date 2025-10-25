@@ -71,7 +71,7 @@
 
 .contact-item i {
     font-size: 24px;
-    color: #2160F3;
+    color: #000000 !important;
     margin-top: 3px;
 }
 
@@ -103,18 +103,14 @@
 
 .contact-form {
     background: white;
-    padding: 25px !important;
+    padding: 30px !important;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid #E5E7EB;
     max-width: 100% !important;
     width: 100% !important;
     height: auto !important;
-    min-height: 350px !important;
-    max-height: 400px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+    display: block !important;
 }
 
 .contact-form h3 {
@@ -132,7 +128,7 @@
 }
 
 .form-group {
-    margin-bottom: 12px !important;
+    margin-bottom: 20px !important;
 }
 
 .form-group label {
@@ -144,7 +140,7 @@
 }
 
 .form-group label i {
-    color: #2160F3;
+    color: #000000 !important;
     margin-right: 5px;
 }
 
@@ -168,8 +164,7 @@
 
 .form-group textarea {
     resize: vertical;
-    min-height: 80px !important;
-    max-height: 120px !important;
+    min-height: 120px;
 }
 
 .submit-button {
