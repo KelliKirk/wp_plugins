@@ -316,12 +316,15 @@
 
 @media (max-width: 768px) {
     .progepesa-contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding: 20px 15px !important;
     }
     
     .contact-form {
-        padding: 30px 20px;
+        padding: 20px 15px !important;
+        min-width: auto !important;
+        width: 100% !important;
     }
     
     .contact-info h2 {
@@ -330,11 +333,34 @@
     
     .contact-form h3 {
         font-size: 20px;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Form rows stack on mobile */
+    .form-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .form-col {
+        width: 100% !important;
     }
     
     /* Center page title on mobile */
     .entry-title, .page-title, h1.entry-title {
         font-size: 28px;
+    }
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .contact-form {
+        min-width: 500px !important;
+    }
+    
+    .form-row {
+        gap: 12px !important;
     }
 }
 
