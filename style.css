@@ -103,7 +103,7 @@
 
 .contact-form {
     background: white;
-    padding: 30px !important;
+    padding: 25px !important;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 2px solid #E5E7EB;
@@ -111,12 +111,13 @@
     width: 100% !important;
     height: auto !important;
     display: block !important;
+    min-width: 600px !important;
 }
 
 .contact-form h3 {
     color: #000000 !important;
     font-size: 24px;
-    margin-bottom: 20px !important;
+    margin-bottom: 15px !important;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -130,8 +131,8 @@
 /* Form layout */
 .form-row {
     display: flex !important;
-    gap: 20px !important;
-    margin-bottom: 20px !important;
+    gap: 15px !important;
+    margin-bottom: 15px !important;
 }
 
 .form-col {
@@ -140,12 +141,12 @@
 }
 
 .form-group {
-    margin-bottom: 20px !important;
+    margin-bottom: 15px !important;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px !important;
     color: #374151;
     font-weight: 600;
     font-size: 15px;
